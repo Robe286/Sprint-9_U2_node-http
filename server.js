@@ -1,10 +1,13 @@
 const http = require ('node:http');
+const information = require ('./data.js')
 
 const server = http.createServer((req, res) =>{
-    console.log('request received')
-    res.end('<h1>Hola mundo</h1>')
+    console.log('request received');
+    res.end(`${information()}`);
 })
 
-server.listen(0, () =>{
-    console.log(`Server listening on port http://localHost:${server.address().port} `)
+server.listen(0, () => {
+    console.log(`Server listening on port http://localhost:${server.address().port} `)
 })
+
+//console.log(information())

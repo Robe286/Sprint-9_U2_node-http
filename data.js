@@ -14,4 +14,4 @@ function information () {
 
 }
 
-console.log(information())
+module.exports = information;
